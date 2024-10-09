@@ -1,0 +1,11 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+#date-time{
+    font-size: xx-large;
+}
+.btn{
+    font-size: larger;
+    background-color: rgb(224, 25, 111);
+}

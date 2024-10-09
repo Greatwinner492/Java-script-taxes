@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Array from Variable</title>
+  <script>
+    // Function that takes a variable and returns an array of that size
+    function createArray(size) {
+      // Create an array with the values from 1 to 'size'
+      let array = [];
+      for (let i = 1; i <= size; i++) {
+        array.push(i); // Push each number into the array
+      }
+      return array;
+    }
+
+    // Function to display the array on the page
+    function displayArray() {
+      // Get the value from the input
+      const size = parseInt(document.getElementById('sizeInput').value);
+      
+      // Get the array based on the input value
+      const resultArray = createArray(size);
+      
+      // Display the array on the page
+      document.getElementById('result').innerHTML = `
+        <strong>Array:</strong> [${resultArray.join(', ')}]
+      `;
+    }
+  </script>
+</head>
+<body>
+  <h1>Create and Display Array Based on Variable</h1>
+  
+  <!-- Form to input the size of the array -->
+  <label for="sizeInput">Enter the size of the array:</label>
+  <input type="number" id="sizeInput" min="1" required>
+  <br><br>
+  
+  <button onclick="displayArray()">Generate Array</button>
+
+  <!-- This is where the result will be displayed -->
+  <p id="result"></p>
+</body>
+</html>

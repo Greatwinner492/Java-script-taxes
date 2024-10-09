@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Division Remainder Calculator</title>
+    <script> 
+       
+        function calculateRemainder() {
+           
+            let dividend = parseFloat(document.getElementById("dividend").value);
+            let divisor = parseFloat(document.getElementById("divisor").value);
+
+          
+            // if (divisor === 0) {
+            //     alert("Error: Divisor cannot be zero!");
+            //     return;
+            // }
+
+           
+            let remainder = dividend % divisor;
+
+            document.getElementById("result").innerText = `The remainder of ${dividend} divided by ${divisor} is: ${remainder}`;
+         
+        }      
+    </script> 
+  
+</head>
+<body>
+   
+<h1>Division Remainder Calculator</h1>
+
+    <label for="dividend">Enter Dividend:</label>
+    <input type="number" id="dividend" placeholder="Enter dividend"><br><br>
+
+    <label for="divisor">Enter Divisor:</label>
+    <input type="number" id="divisor" placeholder="Enter divisor"><br><br>
+
+    <button onclick="calculateRemainder()">Calculate Remainder</button>
+
+    <p id="result"></p><br><br><br>
+
+
+
+
+
+  
+   
+   
+
+
+
+    
+        <h1>Current Date and Time</h1><br><br><br>
+        <div id="date-time"></div><br><br><br>
+
+        <a href="index2.html"><button>Page for power</button></a>
+        
+         
+    
+
+
+        <script>
+            function updateTime() {
+                const now = new Date();
+                const dateTimeString = now.toLocaleString();  // Use toLocaleString to get a full date and time
+                document.getElementById('date-time').innerText = dateTimeString;
+            }
+    
+            setInterval(updateTime, 1000);  // Update every 1 second
+            updateTime();  // Call once immediately
+
+
+
+        </script>
+        
+    
+
+</body>
+
+
+
+
+
+
+</html>

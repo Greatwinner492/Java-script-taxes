@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Power Calculator</title>
+  <script>
+    // Function to calculate the power of a number
+    function calculatePower() {
+      // Get values from the input fields
+      const base = parseFloat(document.getElementById('base').value);
+      const exponent = parseFloat(document.getElementById('exponent').value);
+      
+      // Calculate the power
+      const result = Math.pow(base, exponent);
+      
+      // Display the result
+      document.getElementById('result').innerText = `Result: ${result}`;
+    }
+  </script>
+</head>
+<body>
+  <h1>Power Calculator</h1>
+  
+  <form onsubmit="event.preventDefault(); calculatePower();">
+    <label for="base">Base:</label>
+    <input type="number" id="base" placeholder="Enter Base">
+    <br><br>
+    
+    <label for="exponent">Exponent:</label>
+    <input type="number" id="exponent" placeholder="Enter Exponent">
+    <br><br>
+    
+    <input type="submit" value="Calculate Power">
+  </form>
+
+  <p id="result"></p><br><br><br><br><br><br>
+
+<a href="index3.html"><button>SQRT</button></a>
+</body>
+
+
+</html>
